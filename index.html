@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="fonts.css">
+	<style>
+		* {
+			font-family: 'GothamPro';
+			transition: all 666ms;
+		}
+
+		*::selection {
+			color: #0078d7;
+		}
+
+		body {
+			height: 100%;
+			background-color: black;
+			margin: 0;
+		}
+
+		strong {
+			font-family: 'GothamPro-Bold';
+		}
+
+		body>div {
+			background-position: right 25pt center;
+			background-size: cover;
+		}
+
+		body>div:nth-child(2n+0) {
+			background-color: #222;
+		}
+
+		body>div:nth-child(2n+1) {
+			background-color: #333;
+		}
+
+		body>div:hover {
+			background-position: left 25pt center;
+		}
+
+		body>div:nth-child(3n+0) {
+			background-image: url('stills/0000.png');
+		}
+
+		body>div:nth-child(3n+1) {
+			background-image: url('stills/0001.png');
+		}
+
+		body>div:nth-child(3n+2) {
+			background-image: url('stills/0002.png');
+		}
+
+		body>header {
+			text-align: center;
+			color: white;
+			display: block;
+			margin: auto;
+			background-color: black;
+			display: grid;
+			align-items: center;
+		}
+
+		body>header,
+		body>header>video {
+			width: 100%;
+			height: 100vh;
+		}
+
+		body>header>video {
+			grid-column: 1;
+			grid-row: 1;
+			object-fit: cover;
+		}
+
+		body>header>h1 {
+			background-color: rgba(0, 0, 0, .69);
+			padding: 10pt 15pt;
+			border-radius: 13pt;
+			grid-column: 1;
+			grid-row: 1;
+			margin: auto auto 20pt;
+			z-index: 1;
+		}
+
+		body>div>h1 {
+			grid-column: 1 / -1;
+			color: white;
+			text-align: left;
+			margin: 13pt 0 -9pt;
+			padding: 3pt 20pt 4pt;
+			font-family: 'GothamPro-Black';
+		}
+
+		body>div>h1::after {
+			content: ' •';
+			color: #666666;
+		}
+
+		@media screen and (min-width: 850pt) {
+			.projectGrid {
+				grid-template-columns: repeat(2, auto);
+			}
+		}
+
+		@media screen and (min-width: 1271pt) {
+			.projectGrid {
+				grid-template-columns: repeat(3, auto);
+			}
+		}
+
+		.projectGrid {
+			justify-content: center;
+			column-gap: 15pt;
+			row-gap: 15pt;
+			display: grid;
+			padding: 0 0 20pt;
+		}
+
+		.projectGrid>a {
+			background-color: #0078d7;
+			display: grid;
+		}
+
+		.projectGrid>a>img {
+			grid-column: 1;
+			grid-row: 1;
+			object-fit: cover;
+		}
+
+		.projectGrid>a,
+		.projectGrid>a>img {
+			width: 400pt;
+			height: 200pt;
+		}
+
+		.projectGrid>a>div {
+			z-index: 1;
+			grid-column: 1;
+			grid-row: 1;
+			color: white;
+			margin: auto auto 9pt;
+			background-color: rgba(0, 0, 0, .5);
+			padding: 4pt 7pt;
+			border-radius: 4pt;
+			font-size: large;
+			font-family: 'GothamPro-Bold';
+			text-align: center;
+		}
+
+		.projectGrid>a:hover>img {
+			opacity: 69%;
+			/* NICE */
+		}
+
+		footer {
+			background-image: linear-gradient(69deg, #E2231A, #FF8728, #ffcc00, green, #00a2ff, #0078d7, blue, violet);
+			border-top: #222222 solid 4pt;
+			text-align: center;
+			padding: 24pt 0 20pt;
+		}
+
+		footer>span>strong:not(:first-of-type)::before {
+			padding: 0 6pt;
+			content: '| ';
+		}
+
+		footer>span {
+			background-color: rgba(0, 0, 0, .5);
+			padding: 6pt 13pt;
+			border-radius: 4pt;
+			color: white;
+		}
+
+		footer>span>a {
+			color: white;
+			font-variant-caps: titling-caps;
+			text-decoration: underline dashed rgba(255, 255, 255, .5);
+			font-family: 'GothamPro-Italic';
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>All Praises to Respected Leader VisualPlugin</h1>
+		<video src='video.mov' autoplay muted loop />
+	</header>
+	<div class="projectGrid">
+		<h1>PROJECTS</h1><a>
+			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a>
+		<a>
+			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a><a>
+			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a>
+		<a>
+			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a><a>
+			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a>
+		<a>
+			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a>
+	</div>
+	<div class="projectGrid">
+		<h1>PROJECTS</h1><a>
+			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a>
+		<a>
+			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a><a>
+			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a>
+		<a>
+			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a><a>
+			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a>
+		<a>
+			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
+			<div>
+				Respected Leader VisualPlugin
+			</div>
+		</a>
+	</div>
+	<footer>
+		<span><strong>GitHub: </strong><a href='//github.com/Windows81'>Windows81</a>
+			<strong>Twitter: </strong><a href='//twitter.com/Windows8point1'>@Windows8point1</a>
+			<strong>Roblox: </strong><a href='//roblox.com/users/1630228/profile'>VisualPlugin</a>
+			<strong>Direct: </strong><a>+1 714 463-5142</a> • <a
+				href='mailto:aboshadi.n.ahmed@gmail.com'>aboshadi.n.ahmed@gmail.com</a></span>
+	</footer>
+</body>
