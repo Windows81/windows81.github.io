@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+	<title>• Ahmed Abo-Shadi •</title>
+	<link rel='icon' href='assets/ico.ico' />
 	<link rel="stylesheet" type="text/css" href="fonts.css">
 	<style>
 		* {
@@ -163,6 +165,25 @@
 		footer>span>strong:not(:first-of-type)::before {
 			padding: 0 6pt;
 			content: '| ';
+		}
+
+		@media screen and (max-width: 900pt) {
+			footer>span {
+				display: block;
+				margin: 0 auto;
+				width: fit-content;
+				line-height: 127%;
+				text-align: left;
+			}
+
+			footer>span>* {
+				display: inline;
+			}
+
+			footer>span>strong:not(:first-of-type)::before {
+				content: '\A';
+				white-space: pre-line;
+			}
 		}
 
 		footer>span {
