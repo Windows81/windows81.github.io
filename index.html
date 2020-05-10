@@ -20,6 +20,10 @@
 			margin: 0;
 		}
 
+		a[href] {
+			text-decoration: underline dashed rgba(255, 255, 255, .5);
+		}
+
 		strong {
 			font-family: 'GothamPro-Bold';
 		}
@@ -77,6 +81,8 @@
 
 		body>header>h1 {
 			background-color: rgba(0, 0, 0, .69);
+			/* NICE */
+
 			padding: 10pt 15pt;
 			border-radius: 13pt;
 			grid-column: 1;
@@ -86,11 +92,9 @@
 		}
 
 		body>div>h1 {
-			grid-column: 1 / -1;
 			color: white;
-			text-align: left;
-			margin: 13pt 0 -9pt;
-			padding: 3pt 20pt 4pt;
+			margin: 0;
+			padding: 15pt 20pt 0;
 			font-family: 'GothamPro-Black';
 		}
 
@@ -99,44 +103,81 @@
 			color: #666666;
 		}
 
+		.projectList>div:last-of-type {
+			padding-bottom: 10pt;
+		}
+
+		.projectList>div {
+			display: inline-block;
+			margin: 20pt 10pt 10pt 25pt;
+			width: 400pt;
+		}
+
+		.projectList>div>img {
+			height: 30pt;
+			padding: 0 1pt 0 0;
+			margin-bottom: -7.5pt;
+		}
+
+		.projectList>div>a {
+			font-size: x-large;
+			padding: 0 4pt;
+			font-family: 'GothamPro-Bold';
+			display: inline;
+			color: white;
+		}
+
+		.projectList>div>p {
+			text-align: justify;
+			font-family: 'GothamPro-Italic';
+			padding: 10pt 3pt 0;
+			margin: 0;
+			text-indent: -3pt;
+			display: block;
+			color: #dddddd;
+			font-size: large;
+			line-height: 150%;
+		}
+
+		.projectGrid>div {
+			justify-content: center;
+			column-gap: 15pt;
+			row-gap: 15pt;
+			display: grid;
+			padding: 20pt 0 20pt;
+		}
+
 		@media screen and (min-width: 850pt) {
-			.projectGrid {
+			.projectGrid>div {
 				grid-template-columns: repeat(2, auto);
 			}
 		}
 
 		@media screen and (min-width: 1271pt) {
-			.projectGrid {
+			.projectGrid>div {
 				grid-template-columns: repeat(3, auto);
 			}
 		}
 
-		.projectGrid {
-			justify-content: center;
-			column-gap: 15pt;
-			row-gap: 15pt;
-			display: grid;
-			padding: 0 0 20pt;
-		}
-
-		.projectGrid>a {
+		.projectGrid>div>a {
+			text-decoration: none;
 			background-color: #0078d7;
 			display: grid;
 		}
 
-		.projectGrid>a>img {
+		.projectGrid>div>a>img {
 			grid-column: 1;
 			grid-row: 1;
 			object-fit: cover;
 		}
 
-		.projectGrid>a,
-		.projectGrid>a>img {
+		.projectGrid>div>a,
+		.projectGrid>div>a>img {
 			width: 400pt;
 			height: 200pt;
 		}
 
-		.projectGrid>a>div {
+		.projectGrid>div>a>div {
 			z-index: 1;
 			grid-column: 1;
 			grid-row: 1;
@@ -150,13 +191,15 @@
 			text-align: center;
 		}
 
-		.projectGrid>a:hover>img {
+		.projectGrid>div>a:hover>img {
 			opacity: 69%;
 			/* NICE */
 		}
 
 		footer {
 			background-image: linear-gradient(69deg, #E2231A, #FF8728, #ffcc00, green, #00a2ff, #0078d7, blue, violet);
+			/* NICE */
+
 			border-top: #222222 solid 4pt;
 			text-align: center;
 			padding: 24pt 0 20pt;
@@ -196,7 +239,6 @@
 		footer>span>a {
 			color: white;
 			font-variant-caps: titling-caps;
-			text-decoration: underline dashed rgba(255, 255, 255, .5);
 			font-family: 'GothamPro-Italic';
 		}
 	</style>
@@ -207,83 +249,99 @@
 		<h1>All Praises to Respected Leader VisualPlugin</h1>
 		<video src='video.mov' autoplay muted loop />
 	</header>
-	<div class="projectGrid">
-		<h1>PROJECTS</h1><a>
-			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a>
-		<a>
-			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a><a>
-			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a>
-		<a>
-			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a><a>
-			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a>
-		<a>
-			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a>
+	<div class='projectList'>
+		<h1>PROJECTS</h1>
+		<div>
+			<img src='https://img.icons8.com/windows/69/999999/github.png' />
+			<img src='https://img.icons8.com/windows/69/999999/node-js.png' />
+			<a href='https://github.com/GoAnimate-Wrapper'>GOANIMATE WRAPPER</a>
+			<p>Node.JS project designed to interact with Vyond's Legacy Video Maker. Hundreds of minutes of animation
+				produced prior to formal discontinuation.</p>
+		</div>
+		<div>
+			<img src='https://img.icons8.com/windows/69/999999/html-5.png' />
+			<img src='https://img.icons8.com/windows/69/999999/css3.png' />
+			<img src='https://img.icons8.com/windows/69/999999/js-squared.png' />
+			<a href='/'>THIS WEBSITE</a>
+			<p>This website is a showcase of my frontend development skills. Despite its use of modern responsive design
+				techniques, no JavaScript was required.</p>
+		</div>
+		<div>
+			<img src='https://img.icons8.com/windows/69/999999/php-logo.png' />
+			<img src='https://img.icons8.com/windows/69/999999/discord-logo.png' />
+			<img src='https://img.icons8.com/windows/69/999999/roblox.png' />
+			<a href='https://github.com/Windows81/Playing-Webhooky'>WEBHOOKY</a>
+			<p>Intended for ROBLOX games to interact with Discord's webhook API. Employed by over 200 of game
+				developers to help transfer data to Discord.</p>
+		</div>
+		<div>
+			<img src='https://img.icons8.com/windows/69/999999/node-js.png' />
+			<img src='https://img.icons8.com/windows/69/999999/twitter.png' />
+			<img src='https://img.icons8.com/windows/69/999999/roblox.png' />
+			<a href='https://twitter.com/10erdom'>TENNERDOM</a>
+			<p>Synthesizes publicly-available information to determine which ROBLOX users just became yen years old;
+				remotely hosted on EvenNode.</p>
+		</div>
+		<div>
+			<img src='https://img.icons8.com/windows/69/999999/roblox.png' />
+			<a
+				href='https://github.com/Windows81/The-Fruitful-Labours-of-the-Visual-Roblox-Plugin-of-Respected-Leader-VisualPlugin-the-Prolific'>
+				RESPECTED LEADER VISUALPLUGIN</a>
+			<p>In-Studio plugin designed to streamline the creation of maps and showcases; over 3,600 lines of code
+				written in Lua. Currently on hold.</p>
+		</div>
 	</div>
-	<div class="projectGrid">
-		<h1>PROJECTS</h1><a>
-			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a>
-		<a>
-			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a><a>
-			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a>
-		<a>
-			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a><a>
-			<img src='https://t6.rbxcdn.com/fa4b2340ebe70c48b5a8196ffe8c75ab' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a>
-		<a>
-			<img src='https://t5.rbxcdn.com/79d410fb19e35692e5087bb6a37b257a' />
-			<div>
-				Respected Leader VisualPlugin
-			</div>
-		</a>
+	<div class='projectGrid' name='creatives'>
+		<h1>CREATIVE WORKS</h1>
+		<div>
+			<a href='https://www.roblox.com/games/4794911592'>
+				<img src='assets/kubla.png' />
+				<div>
+					The Kubla Khan
+				</div>
+			</a><a href='https://www.roblox.com/games/2960624866'>
+				<img src='assets/septi.png' />
+				<div>
+					Septicentricity
+				</div>
+			</a><a href='https://www.roblox.com/games/2607258385'>
+				<img src='assets/green.png' />
+				<div>
+					Greenwater
+				</div>
+			</a><a href='https://www.roblox.com/games/2153051204'>
+				<img src='assets/dover.png' />
+				<div>
+					Houses in Dover
+				</div>
+			</a><a href='https://www.roblox.com/games/1189083537'>
+				<img src='assets/otel.png' />
+				<div>
+					Otel Vegashlar
+				</div>
+			</a><a href='https://www.roblox.com/games/1133266822'>
+				<img src='assets/unraavel.png' />
+				<div>
+					Unraavel
+				</div>
+			</a><a href='https://www.roblox.com/games/1019247479'>
+				<img src='assets/duplexxe.png' />
+				<div>
+					Duplexxe Structures
+				</div>
+			</a><a href='https://www.roblox.com/games/936189218'>
+				<img src='assets/trump.png' />
+				<div>
+					Trump Houses
+				</div>
+			</a>
+		</div>
 	</div>
 	<footer>
 		<span><strong>GitHub: </strong><a href='//github.com/Windows81'>Windows81</a>
 			<strong>Twitter: </strong><a href='//twitter.com/Windows8point1'>@Windows8point1</a>
 			<strong>Roblox: </strong><a href='//roblox.com/users/1630228/profile'>VisualPlugin</a>
-			<strong>Direct: </strong><a>+1 714 463-5142</a> • <a
+			<strong>Direct: </strong><a href='tel:+17144635142'>+1 714 463-5142</a> • <a
 				href='mailto:aboshadi.n.ahmed@gmail.com'>aboshadi.n.ahmed@gmail.com</a></span>
 	</footer>
 </body>
